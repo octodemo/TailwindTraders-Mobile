@@ -9,6 +9,7 @@ on: [pull_request]
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   dependency-review:
@@ -18,5 +19,6 @@ jobs:
         uses: actions/checkout@v3
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v3
-        with: 
+        with:
           deny-packages: pkg:nuget/Moq@4.20.0, pkg:nuget/Moq@4.20.1
+          comment-summary-in-pr: true
