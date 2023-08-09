@@ -19,4 +19,4 @@ jobs:
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v3
         with: 
-          deny-packages: pkg:nuget/Moq
+          deny-packages: pkg:nuget/Moq@4.20.0, pkg:nuget/Moq@4.20.1
